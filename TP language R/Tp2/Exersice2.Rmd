@@ -1,0 +1,34 @@
+```{r}
+noms <- c("Ahmed", "Sara", "Khalid", "Fatima", "Omar")
+```
+
+
+```{r}
+ages <- c(25, 30, 22, 40, 35)
+```
+
+```{r}
+salaire <- c(30, 50, 25, 70, 60)
+```
+
+```{r}
+plus_de_30_ans <- noms[ages > 30]
+plus_de_30_ans
+```
+
+```{r}
+salaire_sup_40k <- noms[salaire > 40]
+salaire_sup_40k
+```
+
+```{r}
+expensive <- noms[salaire > 45]
+expensive
+```
+
+Exersice 3
+
+```{r}
+dépenses_mensuelles <- c(200, 300, 150, 400, 250)
+```
+

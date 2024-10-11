@@ -1,0 +1,150 @@
+Exersice 1
+
+```{r}
+sin()
+tan()
+log()
+round()
+cos()
+```
+
+Exersice 2
+
+```{r}
+Prenom = readline('Saisire Votre Prenom : ')
+paste('Votre Prenom Est : ', Prenom)
+```
+```{r}
+cat("Bonjour :" , Prenom , "\n")
+```
+```{r}
+nobreNote = 5
+notes = scan(nmax = nobreNote)
+```
+
+```{r}
+SOMME_Note = sum(notes)
+Moyyen = SOMME_Note / nobreNote
+cat(paste('La Somme des Notes Est : ', SOMME_Note, "\n"))
+cat(paste('La Moyenne des Notes Est : ', Moyyen))
+
+```
+Exersice 3
+
+```{r}
+quantité_commandés <- as.numeric(readline('Entrés le Nombre de Produit Commandés : '))3
+quantité_commandés
+```
+
+```{r}
+if (quantité_commandés <= 10){
+  print('petite commande')
+} else if (quantité_commandés >= 10 & quantité_commandés <=50){
+  print('commande moyenne')
+} else{
+  print('grande commande')
+}
+```
+
+
+```{r}
+taille_paquet <- as.numeric(readline('Saisir La Taille des Paquets : '))      
+if (quantité_commandés %% taille_paquet == 0) {
+  print("Les commandes peuvent être divisées en paquets égaux.")
+} else {
+  print("Les commandes ne peuvent pas être divisées en paquets égaux.")
+}
+```
+
+Exeresice 4
+
+```{r}
+mois <- c("Jan" , "fev" , "mar" , "Avr" , "Mai" , "Jui")
+ventes_mensuelles <- numeric(6)
+for (i in 1:length(mois)){
+  repeat {
+    vente <- as.numeric(readline(paste('Entre les ventes pour le mois',mois[i], '(doit être > 0) : ')))
+    if (vente > 0) {
+      ventes_mensuelles[i] <- vente  
+      break  
+    } else {
+      print("Valeur invalide. Veuillez entrer une valeur supérieure à 0.")
+    }
+  }
+}
+```
+
+
+
+```{r}
+cat("Ventes inférieures à 3000 dh :\n")
+
+for (i in 1:length(ventes_mensuelles)) {
+  if (ventes_mensuelles[i] < 3000) {
+    cat(mois[i], ":", ventes_mensuelles[i], "dh\n")
+  }
+}
+```
+```{r}
+cat("les Valeur inf a 3000 DH : \n")
+for (i in 1 : length(ventes_mensuelles)) {
+  if (ventes_mensuelles[i]< 3000){
+    cat()
+  }
+}
+```
+
+
+```{r}
+objectif_annuel <- numeric(length(ventes_mensuelles))
+for (i in 1 :length(ventes_mensuelles)){
+  objectif_annuel[i]<- ventes_mensuelles[i] + ventes_mensuelles[i + 1]
+}
+objectif_annuel[i]
+```
+
+
+```{r}
+objectif_annuel <- numeric(length(ventes_mensuelles))
+for (i in 1:length(ventes_mensuelles))
+  {
+  objectif_annuel[i] <- ventes_mensuelles[i] + ventes_mensuelles[i+1]
+}
+objectif_annuel[i]
+```
+
+
+Exersice 5
+
+```{r}
+bienvenue <- function()
+  return("Bienvenu")
+```
+
+```{r}
+somme_deux <- function(A , B)
+  return(A+B)
+```
+
+```{r}
+somme_trois <- function(A , B , C=23)
+  return(A+B+C)
+```
+
+```{r}
+moyenne <- function(nombres) {
+  return(mean(nombres))
+}
+```
+
+```{r}
+bienvenue()
+resultat_somme_deux <- somme_deux(5, 3)
+resultat_somme_trois <- somme_trois(4, 2) 
+resultat_moyenne <- moyenne(c(2, 4, 6, 8))
+
+print(paste("Somme de deux nombres :", resultat_somme_deux))
+print(paste("Somme de trois nombres :", resultat_somme_trois))
+print(paste("Moyenne :", resultat_moyenne))
+```
+

@@ -1,0 +1,51 @@
+```{r}
+chaine <- "Bonjour Tous Le Monde"
+nchar(chaine)
+```
+
+```{r}
+texte <- "AymenRami"
+substr(texte, 1, 6)
+```
+```{r}
+nom <- "Aymen"
+age <- 21
+paste(nom, age)
+```
+
+```{r}
+texte <- "Hello"
+toupper(texte)
+```
+
+```{r}
+texte <- "HELLO"
+tolower(texte)
+```
+```{r}
+nom <- "Aymen"
+age <- 21
+paste0(nom , age)
+```
+```{r}
+phrase <- "Bonjour à tous"
+strsplit(phrase, " ")
+```
+```{r}
+chaine <- "excellent"
+gsub("e", "E", chaine)
+```
+
+```{r}
+chaine <- c("chat", "chien", "oiseau")
+grep("ch", chaine)
+```
+```{r}
+chaine <- "excellent"
+sub("e", "E", chaine)
+```
+```{r}
+nom <- "Alice"; age <- 25
+sprintf("Nom: %s, Age: %d", nom, age)
+```
+

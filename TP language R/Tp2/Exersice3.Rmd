@@ -1,0 +1,21 @@
+```{r}
+dépenses_mensuelles <- c(200, 300, 150, 400, 250)
+```
+
+```{r}
+revenus_mensuels <- c(1000, 1500, 800, 2000, 1200)
+```
+
+```{r}
+solde_actuel <- revenus_mensuels - dépenses_mensuelles
+solde_actuel
+```
+```{r}
+pourcentage_revenus <- (dépenses_mensuelles / revenus_mensuels)*100
+print(paste(pourcentage_revenus,"%"))
+```
+```{r}
+dépense_totale <- sum(dépenses_mensuelles)
+dépense_totale
+```
+

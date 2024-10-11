@@ -1,0 +1,140 @@
+Exersice 1
+```{r}
+L1 <- c("Agadir" , "Tanger" , "Merakch" , "Salé" , "Rabat")
+L2 <- c("Paris" , "Leon" , "Marssaille" , "Courbaille-Esson" , "Evry")
+```
+
+```{r}
+longeur1<- length(L1)
+longeur2 <- length(L2)
+longeur1
+longeur2
+```
+```{r}
+L1[1] <- "Casablanca"
+print(L1)
+```
+```{r}
+VillesRegion1 <- L1[1:3]
+print(VillesRegion1)
+```
+```{r}
+L1_sorted <- sort(L1)
+print(L1_sorted)
+
+```
+```{r}
+L1_reversed <- rev(L1)
+print(L1_reversed)
+```
+```{r}
+L3 <- seq(10, 10000, by = 10)
+print(L3)
+```
+
+
+```{r}
+L4 <- rep(0:2, each = 6)
+print(L4) 
+```
+
+```{r}
+Max <- max(L3)
+MIN <- min(L3)
+SUM <- sum(L3)
+MED <- median(L3)
+Ecarttyp <- sd(L3)
+Max
+MIN
+SUM
+MED
+Ecarttyp
+```
+
+Exersice 2
+
+```{r}
+chaine <- "Analyse de Données" 
+sous_chaine <- substr(chaine, 1, 3) 
+cat("Sous-chaîne :", sous_chaine, "\n")
+
+```
+
+```{r}
+prenom <- "Aymen"; nom <- "Rami"
+nom_complet <- paste(prenom, nom, sep = " ")
+cat("Nom Complet :", nom_complet, "\n")
+
+```
+
+```{r}
+texte <- "analyse de données" 
+texte_majuscule <- toupper(texte) 
+cat("Majuscules :", texte_majuscule, "\n")
+
+```
+
+```{r}
+texte <- "R est un langage pour l'analyse de données" 
+motifs <- grep("R", strsplit(texte, " "))
+cat("Occurrences de 'R' :", motifs, "\n")
+```
+
+```{r}
+```
+
+
+Exersice 4
+
+```{r}
+notes <- matrix(c(15, 17, 12, 16, 18, 14, 16, 18, 13, 19, 15, 14), nrow = 3, byrow = TRUE)
+colnames(notes) <- c("EGTSA206", "M201", "M203", "M204")
+rownames(notes) <- c("Stagiaire1", "Stagiaire2", "Stagiaire3")
+```
+
+```{r}
+colnames(notes)
+```
+
+```{r}
+rownames(notes)
+```
+
+```{r}
+matrix()
+```
+
+```{r}
+notes
+```
+```{r}
+dim(notes)
+```
+
+```{r}
+length(notes)
+```
+```{r}
+moyenne_module_sapply <- sapply(1:ncol(notes), function(i) mean(notes[, i]))
+names(moyenne_module_sapply) <- colnames(notes)
+print(moyenne_module_sapply)
+
+```
+
+```{r}
+moyenne_stagiaire_lapply <- lapply(1:nrow(notes), function(i) mean(notes[i, ]))
+names(moyenne_stagiaire_lapply) <- rownames(notes)
+print(moyenne_stagiaire_lapply) 
+
+```
+
+```{r}
+resume_stagiaire <- apply(notes, 1, summary)
+print(resume_stagiaire)
+```
+
+```{r}
+resume_module <- apply(notes, 2, summary)
+resume_module
+```
+

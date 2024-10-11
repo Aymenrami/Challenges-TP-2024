@@ -1,0 +1,71 @@
+
+```{r}
+estMarocain <- TRUE
+```
+
+```{r}
+# 2.
+age <- 21
+```
+
+```{r}
+
+# 3. 
+poids <- 70
+```
+
+```{r}
+# 4. 
+nom_complet <- "Aymen Rami"
+```
+
+```{r}
+# 5. 
+options_choix <- c("IAOADA 201", "IAODCB 201")
+```
+
+```{r}
+# 6. 
+notes_modules <- c(15.5, 16.0, 14.5, 13.5)
+```
+
+```{r}
+# 7.
+coefficients <- c(2, 3, 1, 4)
+```
+
+```{r}
+# 8. 
+moyenne_semestre <- sum(notes_modules * coefficients) / sum(coefficients)
+print(paste("La moyenne du semestre est :", moyenne_semestre))
+
+```
+
+```{r}
+# 9. 
+N <- 5
+absences <- c(2, 0, 1, 5, 3) 
+```
+
+```{r}
+# 10. 
+noms_stagiaires <- c("Ali", "Fatima", "Omar", "Sara", "Khalid")
+
+```
+
+```{r}
+# 11. 
+notes_assiduite <- 20 - absences
+print("Les notes d’assiduité des stagiaires sont :")
+print(notes_assiduite)
+
+```
+
+```{r}
+# 12. 
+stagiaires_assidus <- noms_stagiaires[notes_assiduite > 15]
+print("Les stagiaires ayant une note d’assiduité supérieure à 15 sont :")
+print(stagiaires_assidus)
+
+```
+

@@ -1,0 +1,23 @@
+
+```{r}
+print('hello world')
+```
+```{r}
+5*6
+```
+```{r}
+file.create("test.R")
+print('Hello World')
+TEST_fUN <- function() 
+  + print('Welcom To My First Project')
+```
+    
+```{r}
+source("test.R")
+```
+
+```{r}
+print(TEST_fUN())
+```
+
+    
